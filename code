@@ -1,0 +1,33 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Dopest Hub", "GrapeTheme")
+
+--Movement
+
+local Tab = Window:NewTab("Movement")
+
+ local MovementSection = MovementSection:NewToggle("Speed", "Click to toggle High speed", function(on)
+
+   if on then
+
+   print("Toggle On")
+
+  else
+
+  print("Toggle Off")
+
+  end
+
+  if on then 
+
+    game.Players.LocalPlayer.Character.Humanoid.Walkspeed = on
+
+  on = (on+250)
+
+  else
+
+on = (on-250)
+
+  end)
+
+end
