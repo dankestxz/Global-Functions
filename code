@@ -1,0 +1,57 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Dopest Hub", "GrapeTheme")
+
+--Movement
+
+local game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed 
+
+local game.Players.LocalPlayer.Character.Humanoid.JumpPower = jump 
+
+local Tab = Window:NewTab("Movement")
+
+ local MovementSection = MovementSection:NewToggle("Speed", "Click to toggle High speed", function(one)
+
+   if one then
+
+print("Toggle On")
+
+else 
+
+  print("Toggle Off")
+
+  end
+
+if one then
+
+speed = speed+250
+
+else
+
+speed = speed-250
+
+ end
+
+end)
+
+local MovementSection = MovementSection:NewToggle("Jump Power", "Click to toggle Jump Power", function(two)
+
+  if two then 
+
+    print("Toggle On")
+
+    else
+
+print("Toggle Off")
+
+end
+
+if two then 
+
+  jump = jump+100
+
+  else
+
+jump = jump-100
+
+end)
